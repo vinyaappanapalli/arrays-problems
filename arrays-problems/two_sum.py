@@ -1,0 +1,19 @@
+# Problem: Two Sum
+
+# Approach:
+# Use hashmap to store elements and find complement
+
+def two_sum(nums, target):
+    hashmap = {}
+
+    for i, num in enumerate(nums):
+        diff = target - num
+        if diff in hashmap:
+            return [hashmap[diff], i]
+        hashmap[num] = i
+
+# Example
+print(two_sum([2,7,11,15], 9))
+
+# Time Complexity: O(n)
+# Space Complexity: O(n)
